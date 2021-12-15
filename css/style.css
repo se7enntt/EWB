@@ -1,4 +1,5 @@
 /* https://www.flaticon.com/packs/smileys-4/2 */
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap");
 
 :root {
   --primary-color: #0082c3;
@@ -51,7 +52,7 @@ header .logo img {
 }
 
 header .logo::after {
-  background-image: url("../image/leaf.png");
+  background-image: url("https://raw.githubusercontent.com/se7enntt/EWB/master/image/leaf.png");
   content: "";
   width: 100px;
   height: 100px;
@@ -136,19 +137,19 @@ main {
 }
 
 .container .section.intro .intro__icon {
-  color:white;
-    /* display: flex; */
-    align-items: center;
-    text-transform: uppercase;
-    height: 30px;
-    padding: 2rem;
-    border-radius: 40px;
-    background-color: var(--primary-color);
-    position: absolute;
-    left: -4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  color: white;
+  /* display: flex; */
+  align-items: center;
+  text-transform: uppercase;
+  height: 30px;
+  padding: 2rem;
+  border-radius: 40px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: -4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .section.intro .intro__icon i {
@@ -162,7 +163,6 @@ main {
   /* height: 100px; */
 }
 
-
 /* .container .section.intro .intro__content > .intro__content-content {
   opacity: 0;
 } */
@@ -175,7 +175,11 @@ main {
   flex-direction: column;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company {
   position: relative;
   height: 50px;
   color: #fff;
@@ -186,9 +190,13 @@ main {
   margin-bottom: 10px;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company::before {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company::before {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   bottom: 0;
   width: 100%;
@@ -198,9 +206,12 @@ main {
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
-
-
-.container .section.intro .intro__content .intro__content-title .input--company h2 {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  h2 {
   position: relative;
   font-weight: 700;
   color: var(--primary-color);
@@ -221,14 +232,25 @@ main {
   }
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company .company--code {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  .company--code {
   position: relative;
   width: 100px;
   height: 50px;
   margin-bottom: 10px;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company .company--code input {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  .company--code
+  input {
   position: relative;
   background: transparent;
   box-shadow: none;
@@ -244,25 +266,50 @@ main {
   border-bottom: 1px solid var(--primary-color);
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company .company--code span {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  .company--code
+  span {
   position: absolute;
-    left: 8px;
-    top: 6px;
-    padding: 5px 0;
-    pointer-events: none;
-    font-size: 18px;
-    font-weight: 300;
-    transition: 0.3s;
-    color: #ccc;
-    font-size: 13px;
+  left: 8px;
+  top: 6px;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+  color: #ccc;
+  font-size: 13px;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company .company--code input:focus ~ span,
-.container .section.intro .intro__content .intro__content-title .input--company .company--code input:valid ~ span {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  .company--code
+  input:focus
+  ~ span,
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  .company--code
+  input:valid
+  ~ span {
   transform: translateY(-20px);
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company label {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  label {
   position: relative;
   margin: 5px 0;
   cursor: pointer;
@@ -273,12 +320,24 @@ main {
   width: 40px;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company label input {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  label
+  input {
   display: none;
   appearance: none;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company label span {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  label
+  span {
   position: relative;
   display: inline-block;
   width: 30px;
@@ -289,7 +348,13 @@ main {
   transition: 0.5s;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company label span::before {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  label
+  span::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -301,8 +366,13 @@ main {
   transition: 0.5s;
 }
 
-
-.container .section.intro .intro__content .intro__content-title .input--company label span::after {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  label
+  span::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -314,16 +384,34 @@ main {
   transition: 0.5s;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company input:checked ~ span{
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  input:checked
+  ~ span {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company input:checked ~ span::before{
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  input:checked
+  ~ span::before {
   background: #0f0;
   box-shadow: 0 0 0 transparent;
 }
 
-.container .section.intro .intro__content .intro__content-title .input--company input:checked ~ span::after{
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .input--company
+  input:checked
+  ~ span::after {
   height: 50%;
   background: #0f0;
   box-shadow: 0 0 0 transparent;
@@ -333,13 +421,23 @@ main {
   text-align: center;
 }
 
-.container .section.intro .intro__content .intro__content-title .company--info h5 {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .company--info
+  h5 {
   font-size: 15px;
   color: var(--danger-color);
   font-weight: 700;
 }
 
-.container .section.intro .intro__content .intro__content-title .company--info p {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-title
+  .company--info
+  p {
   font-size: 10px;
   color: #ccc;
   font-style: italic;
@@ -350,8 +448,11 @@ main {
   margin-left: 100px;
 }
 
-
-.container .section.intro .intro__content .intro__content-content .intro__content-content-title {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-content
+  .intro__content-content-title {
   position: relative;
   display: flex;
   justify-content: center;
@@ -360,7 +461,12 @@ main {
   padding-top: 20px;
 }
 
-.container .section.intro .intro__content .intro__content-content .intro__content-content-title h3 {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-content
+  .intro__content-content-title
+  h3 {
   font-size: 20px;
   color: #b6b6b6;
   text-transform: uppercase;
@@ -370,20 +476,30 @@ main {
   width: 20%;
 }
 
-.container .section.intro .intro__content .intro__content-content .intro__content-content-title p {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-content
+  .intro__content-content-title
+  p {
   width: 80%;
   color: #000;
 }
 
-.container .section.intro .intro__content .intro__content-content .intro__content-content-title p::after {
+.container
+  .section.intro
+  .intro__content
+  .intro__content-content
+  .intro__content-content-title
+  p::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 50%;
   height: 2px;
-  width:70%;
-  transform: translate(-50%,-50%);
-  background: linear-gradient(90deg, transparent, #ccc,transparent);
+  width: 70%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, transparent, #ccc, transparent);
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 .container .section.company {
@@ -424,9 +540,28 @@ main {
   width: 100%;
   /* height: 1000px; */
   padding-top: 100px;
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  opacity: 0;
+  display: none;
+  transition: .5s;
+  top: 0;
+}
+
+@keyframes Test {
+  0% {
+    opacity: 0;
+    top: -100px;
+  }
+  10% {
+    overflow: 0.5;
+    top: -80px;
+  }
+
+  100% {
+    overflow: 1;
+    top: 0px;
+  }
 }
 
 .container .section.survey-question i {
@@ -494,7 +629,7 @@ main {
   transform: translate(-50%, -50%);
   /* border-bottom: 1px solid #ccc; */
   height: 2px;
-  background: linear-gradient(90deg, transparent, #ccc,transparent);
+  background: linear-gradient(90deg, transparent, #ccc, transparent);
 }
 
 .survey-question .quiz .quiz__question .text {
@@ -606,6 +741,7 @@ main {
   -moz-appearance: none; /* Firefox */
   -webkit-appearance: none; /* Safari and Chrome */
   appearance: none;
+  
 }
 
 .section.survey-question .demographic-questions .select1-css::before {
@@ -648,7 +784,8 @@ main {
 .action {
   position: relative;
   margin-bottom: 50px;
-  display: flex;
+  display: none;
+  opacity: 0;
   gap: 30px;
   justify-content: center;
   align-items: center;
@@ -707,7 +844,6 @@ select:hover {
 
 .selectdiv .selectBox {
   position: relative;
-  
 }
 
 .selectdiv select {
@@ -724,7 +860,7 @@ select:hover {
   /* float: right; */
   margin: 5px 0px;
   padding: 0px 24px;
-  padding-right:13px;
+  padding-right: 13px;
   font-size: 16px;
   line-height: 1.75;
   color: #333;
@@ -761,7 +897,11 @@ select:hover {
 }
 
 @media (max-width: 992px) {
-  .container .section.intro .intro__content .intro__content-content .intro__content-content-title {
+  .container
+    .section.intro
+    .intro__content
+    .intro__content-content
+    .intro__content-content-title {
     flex-direction: column;
   }
   header .title h2 {
@@ -807,4 +947,93 @@ select:hover {
     width: 100px;
     opacity: 1;
   }
+}
+
+#popup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+#popup::before {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: inherit;
+  width: 95%;
+  height: 50px;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.9;
+}
+
+#popup::after {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: inherit;
+  width: 90%;
+  height: 50px;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.5;
+}
+
+#popup.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#popup .popup__title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup .popup__title h2 {
+  font-family: "Gwendolyn", cursive;
+  font-size: 5rem;
+  color: var(--primary-color);
+}
+
+#popup .popup__content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+#popup .popup__footer {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+
+#popup .popup__footer svg {
+  width: 100%;
+  fill: var(--primary-color);
 }
