@@ -16,12 +16,12 @@
             <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/decathlon-logo.svg" alt="">
         </div>
         <div class="title">
-            <h2>ENGAGEMENT and WELLBEING</h2>
+            <h2 class="title_text"></h2>
         </div>
         <div class="language-selector">
-            <select class="form-select" aria-label="Default select example">
-                <option value="1" selected>VN</option>
-                <option value="2">EN</option>
+            <select class="form-select" id="select-language" aria-label="Default select example" onchange="handleSelectOnChange(this);">
+                <option value="Vi" selected>VN</option>
+                <option value="En">EN</option>
               </select>
         </div>
     </header>
@@ -35,13 +35,13 @@
                 <div class="intro__content">
                     <div class="intro__content-title">
                         <div class="input--company">
-                            <h2>Welcome:</h2>
+                            <h2 class="welcome_text"></h2>
                             <div class="company--code">
                                 <input id="company--code" type="text" maxlength="3" required>
-                                <span>Company code</span>
+                                <span class="companyCodeText"></span>
                             </div>
                             <label>
-                                <input type="checkbox" name="validate" id="">
+                                <input type="checkbox" name="validate" id="validate">
                                 <span class="cross"></span>
                             </label>
                         </div>
@@ -52,206 +52,48 @@
                     </div>
                     <div class="intro__content-content">
                         <div class="intro__content-content-title">
-                            <h3>INTRODUCTION</h3>
-                            <p>We would like you to participate in this survey. Your employer is interested in your opinions on your engagement and well-being. Your response is anonymous and confidential. Your honest and sincere feedback is valued and appreciated.</p>
+                            <h3 class="intro_title"></h3>
+                            <p class="intro_text"></p>
                         </div>
                         
                         <div class="intro__content-content-title">
-                            <h3>Answer explanation</h3>
-                            <p>All experience questions have the following 7 point Likert scale answer options unless otherwise noted.  1=Strongly disagree, 2=Disagree, 3=Somewhat Disagree, 4=Neither agree nor disagree, 5=Somewhat Agree, 6=Agree, 7=Strongly Agree.  All questions will also have a "choose not to answer" option.</p>
+                            <h3 class="explain_title"></h3>
+                            <p class="exlain_text"></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="section survey-question">
-                <i><h2>Phần 1 làm survey nha các bạn</h2></i>
-                <div class="quiz">
-                    <div class="quiz__question">
-                        <h2 class="text">Do you like this channel ? Do you like this channel ? Do you like this channel ? Do you like this channel </h2>
-                    </div>
-                    <div class="rating">
-                        <input type="radio" name="1" id="10" value="112" onchange="Test123(this);">
-                        <label for="10">
-                            <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/dead.png" alt="">
-                            <h4>Choose not to answer</h4>
-                        </label>
-                        
-                        <input type="radio" name="1" id="11" checked="checked">
-                        <label for="11">
-                            <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/in-love.png" alt="">
-                            <h4>Strongly Agree</h4>
-                        </label>
-                        <input type="radio" name="1" id="12">
-                        <label for="12">
-                            <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/happy.png" alt="">
-                            <h4>Agree</h4>
-                        </label>
-                        <input type="radio" name="1" id="13">
-                        <label for="13">
-                            <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/wink.png" alt="">
-                            <h4>Somewhat Agree</h4>
-                        </label>
-                        <input type="radio" name="1" id="14">
-                        <label for="14">
-                            <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/nerd.png" alt="">
-                            <h4>Neither agree nor disagree</h4>
-                        </label>
-                        <input type="radio" name="1" id="15">
-                        <label for="15">
-                            <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/cool.png" alt="">
-                            <h4>Somewhat Disagree</h4>
-                        </label>
-                        <input type="radio" name="1" id="16">
-                        <label for="16">
-                            <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/shocked.png" alt="">
-                            <h4>Disagree</h4>
-                        </label>
-                        <input type="radio" name="1" id="17">
-                        <label for="17">
-                            <img src="https://raw.githubusercontent.com/se7enntt/EWB/master/image/sad.png" alt="">
-                            <h4>Strongly disagree</h4>
-                        </label>
-                    </div>
+                <i><h2 class="part_1"></h2></i>
+                <div class="quiz__content">
                 </div>
-
-                <div class="quiz">
-                    <div class="quiz__question">
-                        <h2 class="text">Do you like this channel ? Do you like this channel ? Do you like this channel ? Do you like this channel </h2>
-                    </div>
-                    <div class="rating">
-                        <input type="radio" name="2" id="20">
-                        <label for="20">
-                            <img src="../image/dead.png" alt="">
-                            <h4>Choose not to answer</h4>
-                        </label>
-                        
-                        <input type="radio" name="2" id="21" checked="checked">
-                        <label for="21">
-                            <img src="../image/in-love.png" alt="">
-                            <h4>Strongly Agree</h4>
-                        </label>
-                        <input type="radio" name="2" id="22">
-                        <label for="22">
-                            <img src="../image/happy.png" alt="">
-                            <h4>Agree</h4>
-                        </label>
-                        <input type="radio" name="2" id="23">
-                        <label for="23">
-                            <img src="../image/wink.png" alt="">
-                            <h4>Somewhat Agree</h4>
-                        </label>
-                        <input type="radio" name="2" id="24">
-                        <label for="24">
-                            <img src="../image/nerd.png" alt="">
-                            <h4>Neither agree nor disagree</h4>
-                        </label>
-                        <input type="radio" name="2" id="25">
-                        <label for="25">
-                            <img src="../image/cool.png" alt="">
-                            <h4>Somewhat Disagree</h4>
-                        </label>
-                        <input type="radio" name="2" id="26">
-                        <label for="26">
-                            <img src="../image/shocked.png" alt="">
-                            <h4>Disagree</h4>
-                        </label>
-                        <input type="radio" name="2" id="27">
-                        <label for="27">
-                            <img src="../image/sad.png" alt="">
-                            <h4>Strongly disagree</h4>
-                        </label>
-                    </div>
-                </div>
+                
             </div>
 
             <div class="section survey-question">
-                <i><h2>Khảo sát nhân số học</h2></i>
+                <i><h2 class="part_2"></h2></i>
                 <div class="demographic-questions">
                     <div class="selectdiv">
                         <span>Giới tính của bạn là: </span>
                         <div class="selectBox">
                             <label>
                                 <select>
-                                    <option disabled="disabled" selected="selected" style="display:none;">sdadsadsadsadsafđsdsfsdfdsfdsadsadad</option>
                                     <option>Option 1</option>
                                     <option>Option 2</option>
                                     <option>Last long option</option>
                                 </select>
                             </label>
                         </div>
-                        
                     </div>
 
-                    <div class="selectdiv">
-                        <span>Có bao nhiêu người phụ thuộc vào tài chính của bạn ?saljdlksajd l asjdlkajd lk aksldjlksajd lkalsjdlksa </span>
-                        <label>
-                            <select>
-                                <option disabled="disabled" selected="selected" style="display:none;"> Select Box </option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Last long option</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div class="selectdiv">
-                        <span> bao nhiêu người phụ thuộc vào tài chính của bạn ?saljdlksajd l asjdlkajd lk aksldjlksajd lkalsjdlksa skjakdjsak jkdsa jksajd ksajd ksajdksa jkds kdsjakd jlksajd lksajd lksajd lkjsad lkjsald jsalkd jlksa</span>
-                        <label>
-                            <select>
-                                <option disabled="disabled" selected="selected" style="display:none;"> Select Box </option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Last long option</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div class="selectdiv">
-                        <span>Giới tính của bạn là: </span>
-                        <label>
-                            <select>
-                                <option disabled="disabled" selected="selected" style="display:none;"> Select Box </option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Last long option</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div class="selectdiv">
-                        <span>Giới tính của bạn là: </span>
-                        <label>
-                            <select>
-                                <option disabled="disabled" selected="selected" style="display:none;"> Select Box </option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Last long option</option>
-                            </select>
-                        </label>
-                    </div>
-
-                    <div class="selectdiv">
-                        <span>Giới tính của bạn là: </span>
-                        <label>
-                            <select>
-                                <option disabled="disabled" selected="selected" style="display:none;"> Select Box </option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Last long option</option>
-                            </select>
-                        </label>
-                    </div>
-                    
                 </div>
             </div>
         </div>
         <div class="action">
-            <button id="btn_submit" class="btn btn-primary" onclick="toggle();">Submit</button>
-            <button id="btn_cancel" class="btn btn-secondary" onclick="refeshPage();">Cancel</button>
+            <button id="btn_submit" class="btn btn-primary"></button>
+            <button id="btn_cancel" class="btn btn-secondary" onclick="refeshPage();"></button>
         </div>
     </main>
-    <footer>   
-    </footer>
     <div class="progressBar">
         <div class="progressBar__answer">
             <span class="progress__answer"></span>
@@ -265,21 +107,22 @@
 
     <div id="popup">
         <div class="popup__title">
-            <h2>Thank you</h2>
+            <h2 class="thankyou_title"></h2>
         </div>
         <div class="popup__content">
-            <p>Thank you for taking this survey. Your response is anonymous and confidential.</p>
+            <p class="thankyou_content"></p>
             <button style="display:none" class="btn btn-primary" type="button" disabled >
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Loading...
               </button>
-              <button class="btn btn-primary" type="button" onclick="refeshPage();">Back to survey</button>
+              <button class="btn btn-primary thankyou_btn" type="button" onclick="refeshPage();"></button>
         </div>
 
         <div class="popup__footer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path d="M0,160L40,181.3C80,203,160,245,240,250.7C320,256,400,224,480,192C560,160,640,128,720,96C800,64,880,32,960,21.3C1040,11,1120,21,1200,42.7C1280,64,1360,96,1400,112L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </div>
     </div>
+
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./index.js"></script>

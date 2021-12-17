@@ -77,9 +77,7 @@ header .logo::after {
     transform: translatey(0px);
   }
 }
-footer .mobile-payment {
-  padding: 2rem !important;
-}
+
 
 header .title {
   color: #fff;
@@ -318,6 +316,7 @@ main {
   font-size: 2em;
   color: #ccc;
   width: 40px;
+  pointer-events: none;
 }
 
 .container
@@ -329,6 +328,7 @@ main {
   input {
   display: none;
   appearance: none;
+  
 }
 
 .container
@@ -548,7 +548,13 @@ main {
   top: 0;
 }
 
-@keyframes Test {
+.container .section.survey-question.active {
+  display: flex;
+  opacity: 1;
+  animation: showQuestion 1s linear;
+}
+
+@keyframes showQuestion {
   0% {
     opacity: 0;
     top: -100px;
@@ -606,6 +612,15 @@ main {
   font-size: 1.5rem;
 }
 
+.section.survey-question .quiz__content {
+  width: 100%;
+  /* height: 1000px; */
+  /* padding-top: 100px; */
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: .5s;
+}
+
 .survey-question .quiz {
   position: relative;
   width: 100%;
@@ -637,6 +652,11 @@ main {
   width: 100%;
   font-size: 20px;
   padding-left: 20px;
+  color: #212529;
+}
+
+.survey-question .quiz .quiz__question .text.miss {
+  color: var(--danger-color);
 }
 
 .quiz .rating {
@@ -648,6 +668,7 @@ main {
   flex-wrap: wrap;
   padding-top: 50px;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .rating input {
@@ -700,7 +721,8 @@ main {
 
 .rating input:checked + label h4 {
   opacity: 1;
-  transform: translateY(-90px) scale(1);
+  left: 50%;
+  transform: translateY(-80px) scale(1);
   transition: 0.5s;
   color: #000;
 }
@@ -756,9 +778,14 @@ main {
 
 .progressBar {
   position: fixed;
+  display: none;
   width: 100%;
   bottom: 0;
   z-index: 10000;
+}
+
+.progressBar.active {
+  display: block;
 }
 
 .progressBar .progressBar__answer {
@@ -789,6 +816,12 @@ main {
   gap: 30px;
   justify-content: center;
   align-items: center;
+}
+
+.action.active {
+  display: flex;
+  opacity: 1;
+  animation: showQuestion 1s linear;
 }
 
 /* Test selector */
@@ -872,6 +905,10 @@ select:hover {
   border-radius: 5px;
   outline-color: var(--primary-color);
   cursor: pointer;
+}
+
+.selectdiv select.miss {
+  color: var(--danger-color);
 }
 
 .selectdiv select option {
@@ -1008,7 +1045,7 @@ select:hover {
 
 #popup .popup__title h2 {
   font-family: "Gwendolyn", cursive;
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--primary-color);
 }
 
