@@ -197,7 +197,7 @@ let sessionData = [
     "startDate",
     "endDate",
   ],
-  ["1", "S1", "EWB 2021", "EWB", "HBF", "44543", "44548"],
+  ["1", "S1", "EWB 2021", "EWB", "HBF", "44543", "44558"],
   ["2", "S1123", "EWB 2021", "EWB", "NEW", "34550", "34550"],
 ];
 
@@ -482,6 +482,7 @@ function InfoLoad(sessionList, surveyorList, surveyorInput) {
     }
 }
 
+
 function quizload() {
   var valid = document.getElementById('validate');
   var questionContainer = document.querySelectorAll('.container .section.survey-question');
@@ -599,21 +600,31 @@ function answerSelectValid() {
 
 //Test
 function Submit() {
+  var submitted = false;
+  noPending = answerQuizValid() + answerSelectValid();
+  if (noPending >0) {
+    if (language === 'Vi') {
+      html = `Bạn cần trả lời thêm: ${noPending} để hoàn thành`;
+    }
+    if (language === 'En') {
+      html = `You have to answer more ${noPending} to be completed this survey`;
+    }
+    showToast(html);
+  }
+  else {
+    var popup = document.getElementById("popup");
+    popup.classList.add("active");
+    var header = document.querySelector("header");
+    var main = document.querySelector("main");
+    header.style.filter = "blur(20px)";
+    main.style.filter = "blur(20px)";
+    main.style.pointerEvents = 'none';
+    if (submitted) {
+      var loader = document.getElementById('loader');
+      loader.classList.add('fadeOut');  
+    }
+  }
   
-      console.log("answered valid: ", answerQuizValid());
-      console.log("answered select valid: ", answerSelectValid());
-  return;
-  var header = document.querySelector("header");
-  var main = document.querySelector("main");
-  var footer = document.querySelector("footer");
-  var popup = document.getElementById("popup");
-  // document.getElementsByClassName('progress-bar')[0].style.width = "50%";
-  var progressBar = document.getElementsByClassName("progress-bar")[0];
-  header.style.filter = "blur(20px)";
-  main.style.filter = "blur(20px)";
-  footer.style.filter = "blur(20px)";
-  mainEle.style.pointerEvents = 'none';
-  popup.classList.add("active");
 }
 
 function refeshPage() {
@@ -862,6 +873,7 @@ function buildQuiz(questionList, lang) {
   }
 }
 
+
 function buildAnswerType(answerTypeList, answerType) {
   let result = [];
   if (answerTypeList && answerType) {
@@ -884,3 +896,47 @@ function buildAnswerType(answerTypeList, answerType) {
   }
   return result;
 }
+
+
+//Toast control
+
+let x;
+let toast = document.getElementById("toast");
+function showToast(html){
+    const content = document.getElementsByClassName('toast__content');
+    content[0].innerHTML = html;
+    clearTimeout(x);
+    toast.style.transform = "translateX(0)";
+    x = setTimeout(()=>{
+        toast.style.transform = "translateX(400px)"
+    }, 4000);
+}
+function closeToast(){
+    toast.style.transform = "translateX(400px)";
+}
+
+function fadeInOutEffect(id,fade) {
+  var fadeTarget = document.getElementById(id);
+  var interval = 2000;
+  var fadeEffect = setInterval(function () {
+      if (!fadeTarget.style.opacity) {
+        if (fade === 'In') {
+          fadeTarget.style.opacity = 0;
+        }
+        else {
+          fadeTarget.style.opacity = 1;
+        } 
+      }
+      if (fadeTarget.style.opacity > 0 && fade === 'Out') {
+          fadeTarget.style.opacity -= 0.1;
+      } else {
+          clearInterval(fadeEffect);
+      }
+      if (fadeTarget.style.opacity <=1  && fade === 'In') {
+        fadeTarget.style.opacity += 0.1;
+    } else {
+        clearInterval(fadeEffect);
+    }
+  }, 2000);
+}
+

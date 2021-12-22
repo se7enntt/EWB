@@ -108,6 +108,50 @@ main {
   flex-direction: column;
 }
 
+.container .lds-hourglass {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.container .lds-hourglass.fadeOut {
+  animation: 2s fadeOut linear;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container .lds-hourglass::after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: var(--primary-color) transparent var(--primary-color) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
 .container .section {
   position: relative;
   margin-top: 30px;
@@ -995,10 +1039,11 @@ select:hover {
   padding: 50px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
   background: #fff;
-  visibility: hidden;
+  display:none;
   opacity: 0;
   transition: 0.5s;
   border-radius: 20px;
+  z-index: 10000;
 }
 
 #popup::before {
@@ -1031,9 +1076,9 @@ select:hover {
 
 #popup.active {
   top: 50%;
-  visibility: visible;
   opacity: 1;
   transition: 0.5s;
+  display: grid;
 }
 
 #popup .popup__title {
@@ -1058,6 +1103,84 @@ select:hover {
   margin-bottom: 50px;
 }
 
+#popup .popup__content .loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -10px;
+  background: #fff;
+  width: 100%;
+  min-height: 110px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+#popup .popup__content .loading p,
+#popup .popup__content .loading button {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#popup .popup__content .loading.fadeOut {
+  animation: 2s fadeOut linear;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#popup .popup__content .loading.fadeOut ~ p,
+#popup .popup__content .loading.fadeOut ~ button {
+  animation: 4s fadeIn linear;
+  /* visibility: visible;
+  opacity: 1; */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  30% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+#popup .popup__content .loading>div{
+  height: 100px;
+  width: 100px;
+  border: 15px solid #ccc;
+  border-top-color: var(--primary-color);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
 #popup .popup__footer {
   position: absolute;
   width: 100%;
@@ -1073,4 +1196,67 @@ select:hover {
 #popup .popup__footer svg {
   width: 100%;
   fill: var(--primary-color);
+}
+
+
+.wrapper{
+  width: 420px;
+  padding: 30px 20px;
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  overflow: hidden;
+}
+#show-toast{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  background-color: #101020;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toast{
+  width: 380px;
+  height: 80px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
+  border-left: 8px solid var(--danger-color);
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 1.2fr 6fr 0.5fr;
+  transform: translate(400px);
+  transition: 1s;
+}
+
+.container-1,.container-2{
+  align-self: center;
+}
+.container-1 i{
+  font-size: 40px;
+  color: var(--danger-color);
+}
+.container-2 p:first-child{
+  color: #101020;
+  font-weight: 600;
+  font-size: 16px;
+}
+.container-2 p:last-child{
+  font-size: 12px;
+  color: #656565;
+  font-weight: 400;
+}
+#toast button{
+  align-self: flex-start;
+  background-color: transparent;
+  font-size: 25px;
+  line-height: 0;
+  color: #656565;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
